@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2019/03/19 19:57:24.560,=C:\Users\Artur Barth\Documents\Embarcadero\Studio\Projects\Unit7.pas</Transaction>
+    <Transaction>2019/03/19 20:02:04.985,C:\Users\Artur Barth\Desktop\GeradorSQL\uGeradorSQL.pas=C:\Users\Artur Barth\Documents\Embarcadero\Studio\Projects\Unit7.pas</Transaction>
+    <Transaction>2019/03/19 20:02:04.985,C:\Users\Artur Barth\Desktop\GeradorSQL\uGeradorSQL.dfm=C:\Users\Artur Barth\Documents\Embarcadero\Studio\Projects\Unit7.dfm</Transaction>
+    <Transaction>2019/03/19 20:02:18.731,C:\Users\Artur Barth\Desktop\GeradorSQL\prjGeradorSQL.dproj=C:\Users\Artur Barth\Documents\Embarcadero\Studio\Projects\Project4.dproj</Transaction>
+    <Transaction>2019/03/19 20:06:28.930,=C:\Users\Artur Barth\Desktop\GeradorSQL\Unit1.pas</Transaction>
+    <Transaction>2019/03/19 20:06:51.767,C:\Users\Artur Barth\Desktop\GeradorSQL\uGeraSQL.pas=C:\Users\Artur Barth\Desktop\GeradorSQL\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>
