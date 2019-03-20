@@ -83,9 +83,6 @@ type
       property Colunas: TList<IColuna> read FColunas write SetColunas;
       property Tabelas: TList<ITabela> read FTabelas write SetTabelas;
       property Condicao: TList<ICondicao> read FCondicao write SetCondicao;
-
-
-
   End;
 
 implementation
@@ -109,7 +106,7 @@ end;
 
 function TGeradorSQL.GerarSQL: String;
 begin
-  Result := Format('SELECT %S FROM %S WHERE %S', [RetornarColuas, RetornarTabelas, RetornarWhere]);
+  Result := Format('SELECT %S FROM %S WHERE %S', [RetornarColuas , RetornarTabelas, RetornarWhere]);
 end;
 
 function TGeradorSQL.RetornarColuas: String;
@@ -117,8 +114,10 @@ var
   I: Integer;
 begin
   for I := 0 to Colunas.Count-1 do
-    Result := Result + Colunas[i].RetornarColuna + ', ';
-  //Result := Copy(Result, 1, Length(Result)-2);
+    if I = Colunas.Count-1 then
+      Result := Result + Colunas[i].RetornarColuna + sLineBreak
+    else
+      Result := Result + Colunas[i].RetornarColuna + ', ';
 end;
 
 function TGeradorSQL.RetornarTabelas: String;
@@ -126,8 +125,10 @@ var
   I: Integer;
 begin
   for I := 0 to Tabelas.Count-1 do
-    Result := Result + Tabelas[i].RetornarTabela + ', ';
-  //Result := Copy(Result, 1, Length(Result)-2);
+    if I = Tabelas.Count-1 then
+      Result := Result + Tabelas[i].RetornarTabela + sLineBreak
+    else
+      Result := Result + Tabelas[i].RetornarTabela + ', ';
 end;
 
 function TGeradorSQL.RetornarWhere: String;
@@ -135,8 +136,10 @@ var
   I: Integer;
 begin
   for I := 0 to Condicao.Count-1 do
-    Result := Result + Condicao[i].RetornarCondicao + ' AND ';
-  //Result := Copy(Result, 1, Length(Result)-5);
+    if I = Condicao.Count-1 then
+      Result := Result + Condicao[i].RetornarCondicao + sLineBreak
+    else
+      Result := Result + Condicao[i].RetornarCondicao + ' AND ';
 end;
 
 procedure TGeradorSQL.SetColunas(const Value: TList<IColuna>);

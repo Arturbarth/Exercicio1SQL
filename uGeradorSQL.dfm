@@ -20,7 +20,7 @@ object FGeradorSQL: TFGeradorSQL
     Height = 193
     Align = alTop
     TabOrder = 0
-    object GroupBox3: TGroupBox
+    object gbxCondicao: TGroupBox
       Left = 472
       Top = 32
       Width = 185
@@ -34,13 +34,9 @@ object FGeradorSQL: TFGeradorSQL
         Height = 88
         Align = alClient
         TabOrder = 0
-        ExplicitLeft = 0
-        ExplicitTop = 16
-        ExplicitWidth = 185
-        ExplicitHeight = 89
       end
     end
-    object GroupBox2: TGroupBox
+    object gbxTabela: TGroupBox
       Left = 255
       Top = 32
       Width = 185
@@ -54,12 +50,9 @@ object FGeradorSQL: TFGeradorSQL
         Height = 88
         Align = alClient
         TabOrder = 0
-        ExplicitLeft = 0
-        ExplicitWidth = 185
-        ExplicitHeight = 89
       end
     end
-    object GroupBox1: TGroupBox
+    object gbxColuna: TGroupBox
       Left = 40
       Top = 32
       Width = 185
@@ -73,7 +66,6 @@ object FGeradorSQL: TFGeradorSQL
         Height = 88
         Align = alClient
         TabOrder = 0
-        ExplicitLeft = 1
       end
     end
     object btnGerarSQL: TButton
@@ -94,10 +86,6 @@ object FGeradorSQL: TFGeradorSQL
     Align = alClient
     Caption = 'SQL:'
     TabOrder = 1
-    ExplicitLeft = 184
-    ExplicitTop = 272
-    ExplicitWidth = 185
-    ExplicitHeight = 105
     object mmSQL: TMemo
       Left = 2
       Top = 15
@@ -105,7 +93,6 @@ object FGeradorSQL: TFGeradorSQL
       Height = 185
       Align = alClient
       TabOrder = 0
-      ExplicitLeft = 3
     end
   end
 end

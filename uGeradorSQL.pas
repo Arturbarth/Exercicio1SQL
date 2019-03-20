@@ -9,9 +9,9 @@ uses
 type
   TFGeradorSQL = class(TForm)
     pnlTop: TPanel;
-    GroupBox3: TGroupBox;
-    GroupBox2: TGroupBox;
-    GroupBox1: TGroupBox;
+    gbxCondicao: TGroupBox;
+    gbxTabela: TGroupBox;
+    gbxColuna: TGroupBox;
     mmColuna: TMemo;
     mmTabela: TMemo;
     mmCondicao: TMemo;
@@ -50,7 +50,7 @@ end;
 
 function TFGeradorSQL.ValidarMemosPreenchidos: Boolean;
 begin
-  Result := (mmColuna.Lines.Count > 0) and (mmTabela.Lines.Count > 0) and (mmCondicao.Lines.Count > 0);
+  Result := (Trim(mmColuna.Text) <> EmptyStr) and (Trim(mmTabela.Text) <> EmptyStr) and (Trim(mmCondicao.Text) <> EmptyStr);
 end;
 
 procedure TFGeradorSQL.GerarSQL;
@@ -62,7 +62,7 @@ begin
     AdicionarColunas(oGerador);
     AdicionarTabelas(oGerador);
     AdicionarCondicoes(oGerador);
-    mmSQL.Lines.Add(oGerador.GerarSQL);
+    mmSQL.Text := oGerador.GerarSQL;
   finally
     FreeAndNil(oGerador);
   end;
